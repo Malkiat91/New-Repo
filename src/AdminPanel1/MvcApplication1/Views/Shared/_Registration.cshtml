@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- Stylesheets -->
+    <link href="~/style/bootstrap.css" rel="stylesheet" />
+    <link href="~/style/font-awesome.css" rel="stylesheet" />
+    <link href="~/style/style.css" rel="stylesheet" />
+    @*<link href="~/style/screen.css" rel="stylesheet" />*@
+    <link href="~/style/lightbox.css" rel="stylesheet" />
+    <link href="~/style/styleprice.css" rel="stylesheet" />
+    <link href="~/style/red.css" rel="stylesheet" />
+    @*<link href="style/bootstrap.css" rel="stylesheet">*@
+    @*<link rel="stylesheet" href="style/font-awesome.css">*@
+    @*<link href="style/style.css" rel="stylesheet">*@
+    <link href="~/style/bootstrap-responsive.css" rel="stylesheet">
+    <!-- HTML5 Support for IE -->
+    <!--[if lt IE 9]>
+  <script src="js/html5shim.js"></script>
+  <![endif]-->
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon/favicon.png">
+</head>
+<body>
+    <div id="body">
+        @*@RenderSection("featured", required: false)*@
+        <section>
+            @RenderBody()
+        </section>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/js/jquery.js")
+    @Scripts.Render("~/js/bootstrap.js")
+    @Scripts.Render("~/js/modernizr.custom.js")
+    @Scripts.Render("~/js/lightbox-2.6.min.js")
+    @RenderSection("scripts", required: false)
+    <script>
+        $(document).ready(function () {
+            $("#toggle").click(function () {
+                $("#Register").attr("disabled", !this.checked);
+            });
+        });
+    </script>
+</body>
+</html>
