@@ -1,0 +1,192 @@
+﻿@{
+    Layout = "~/Views/Shared/_Registration.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <!-- Page heading starts -->
+
+    <div class="page-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Pricing Table #1</h2>
+                    <h4>something goes here</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Heading ends -->
+    <!-- Page content starts -->
+    <div class="content">
+        <div class="container">
+
+            <!-- Pricing table -->
+            <!-- Price details. Note down the class name before you edit. -->
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <!-- Pricing table #1. Class name "col-left" -->
+                    <div class="col-left pricel center">
+                        <div class="phead-top">
+                            <!-- Title -->
+                            <h4>Starter</h4>
+                        </div>
+                        <div class="phead-bottom">
+                            <!-- Price. Use the syntax correctly. -->
+                            <p><span class="pst">$</span> 4.99 <span class="psb">/m</span></p>
+                        </div>
+                        <div class="arrow-down"></div>
+                        <div class="plist">
+                            <!-- List -->
+                            <ul>
+                                <!-- List with tooltip. -->
+                                <li>1 GB Disk Space <a href="#" rel="tooltip" id="price-tip1" data-placement="top" data-original-title="something"><i class="icon-question-sign"></i></a></li>
+                                <li>10 GB Data Transfer</li>
+                                <li>Single Domain</li>
+                                <li>10 Email Ids</li>
+                                <li>Top Notch Support</li>
+                                <li>Instant Activation</li>
+                            </ul>
+                        </div>
+                        <div class="pbutton button">
+                            <!-- button -->
+                            @*<a href="#"><i class="icon-shopping-cart"></i>Buy Now</a>*@
+                            @Html.ActionLink("Buy Now", "Register")
+                        </div>
+                    </div>
+
+                    <!-- Pricing table #2. Class name "col-right" -->
+                    <div class="col-right pricel center">
+                        <div class="phead-top">
+                            <h4>Basic</h4>
+                        </div>
+                        <div class="phead-bottom">
+                            <p><span class="pst">$</span> 8.99 <span class="psb">/m</span></p>
+                        </div>
+                        <div class="arrow-down"></div>
+                        <div class="plist">
+                            <ul>
+                                <li>1 GB Disk Space</li>
+                                <li>10 GB Data Transfer</li>
+                                <li>Single Domain</li>
+                                <li>10 Email Ids</li>
+                                <li>Top Notch Support</li>
+                                <li>Instant Activation</li>
+                            </ul>
+                        </div>
+                        <div class="pbutton button">
+                            <!-- button -->
+                            @*<a href="#"><i class="icon-shopping-cart"></i>Buy Now</a>*@
+                            @Html.ActionLink("Buy Now", "Register")
+                        </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="col-md-6">
+
+                    <!-- Pricing table #3. Class name "col-left" -->
+                    <div class="col-left pricel center">
+                        <div class="phead-top">
+                            <h4>Business</h4>
+                        </div>
+                        <div class="phead-bottom">
+                            <p><span class="pst">$</span> 12.99 <span class="psb">/m</span></p>
+                        </div>
+                        <div class="arrow-down"></div>
+                        <div class="plist">
+                            <ul>
+                                <li>1 GB Disk Space</li>
+                                <li>10 GB Data Transfer</li>
+                                <li>Single Domain</li>
+                                <li>10 Email Ids</li>
+                                <li>Top Notch Support</li>
+                                <li>Instant Activation</li>
+                            </ul>
+                        </div>
+                        <div class="pbutton button">
+                            <!-- button -->
+                            @*<a href="#"><i class="icon-shopping-cart"></i>Buy Now</a>*@
+                            @Html.ActionLink("Buy Now", "Register", new {@ID="1"})
+                        </div>
+                    </div>
+                    <!-- Pricing table #4. Class name "col-right" -->
+                    <div class="col-right pricel center">
+                        <div class="phead-top">
+                            <h4>Enterprise</h4>
+                        </div>
+                        <div class="phead-bottom">
+                            <p><span class="pst">$</span> 39.99 <span class="psb">/m</span></p>
+                        </div>
+                        <div class="arrow-down"></div>
+                        <div class="plist">
+                            <ul>
+                                <li>1 GB Disk Space</li>
+                                <li>10 GB Data Transfer</li>
+                                <li>Single Domain</li>
+                                <li>10 Email Ids</li>
+                                <li>Top Notch Support</li>
+                                <li>Instant Activation</li>
+                            </ul>
+                        </div>
+                        <div class="pbutton button">
+                            <!-- button -->
+                            @*<a href="#"><i class="icon-shopping-cart"></i>Buy Now</a>*@
+                            @Html.ActionLink("Buy Now", "Register")
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        Already Registred?  @Html.ActionLink("Login", "Login")
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Page content ends -->
+        <!-- CTA Starts -->
+        <div class="container">
+            <div class="cta">
+                <div class="row">
+                    <div class="col-md-5 col-sm-5">
+                        <div class="ctas">
+                            <!-- Title and Para -->
+                            <h5>Professional Product Ever Made in Internet</h5>
+                            <p>Sed diam nisi, pulvinar vitae molestie vitae molestie hendreri hendrerit, venenatis eget mauris.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="ctas">
+                            <!-- List -->
+                            <ul>
+                                <li>Very Cheap in Market. Check it today.</li>
+                                <li>Professional and Powerful. Don't miss it.</li>
+                                <li>1000% Guanrantee. No Worries. No Probs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <div class="ctas">
+                            <!-- Button -->
+                            <div class="button">@*<a href="#">Buy it Today for $99</a>*@
+                                @Html.ActionLink("Buy Now", "Register")
+                            </div>
+                            <p>limited period offer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Ends -->
+    
+    </div>
+</body>
+</html>

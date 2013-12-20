@@ -1,0 +1,82 @@
+﻿@model MvcApplication1.Models.LoginModel
+@{
+    ViewBag.Title = "Register";
+}
+@{
+    Layout = "~/Views/Shared/_Registration.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="admin-form">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Widget starts -->
+                        <div class="widget worange">
+                            <!-- Widget head -->
+                            <div class="widget-head">
+                                <i class="icon-lock"></i>Login 
+                            </div>
+
+                            <div class="widget-content">
+                                <div class="padd">
+                                    <!-- Login form -->
+                                    <div class="form-horizontal">
+                                        <!-- Email -->
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.UserName, new { @class = "control-label col-lg-3" })
+                                            @*<label class="control-label col-lg-3" for="inputEmail">Email</label>*@
+                                            <div class="col-lg-9">
+                                                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                                                @Html.ValidationMessageFor(m => m.UserName)
+                                                @*<input type="text" class="form-control" id="inputEmail" placeholder="Email">*@
+                                            </div>
+                                        </div>
+                                        <!-- Password -->
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Password, new { @class = "control-label col-lg-3" })
+                                            @*<label class="control-label col-lg-3" for="inputPassword">Password</label>*@
+                                            <div class="col-lg-9">
+                                                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                                @Html.ValidationMessageFor(m => m.Password)
+                                                @*<input type="password" class="form-control" id="inputPassword" placeholder="Password">*@
+                                            </div>
+                                        </div>
+                                        <!-- Remember me checkbox and sign in button -->
+                                        <div class="form-group">
+                                            <div class="col-lg-9 col-lg-offset-3">
+                                                <div class="checkbox">
+                                                    Remember me
+                                                @Html.CheckBoxFor(m => m.RememberMe)
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-9 col-lg-offset-2">
+                                            <button type="submit" class="btn btn-danger">Sign in</button>
+                                            <button type="reset" class="btn btn-default">Reset</button>
+                                        </div>
+                                        <br />
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="widget-foot">
+                                Not Registred?  @Html.ActionLink("Register here", "Pricing")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</body>
+</html>
